@@ -7,6 +7,7 @@ const input=document.querySelector("#search-input");
 const btn=document.querySelector("#search-button");
 const img=document.querySelector("#sprite");
 const typee=document.querySelector("#type");
+const form=document.querySelector(".form");
 let arrUrl=[];
 const fetchData=async()=>{
 fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${input.value.toLowerCase()}`).then(res =>{
@@ -50,7 +51,14 @@ fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${input.value.toLowe
 
 
 
-btn.addEventListener("click",()=>{
+btn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  fetchData();
+})
+
+
+form.addEventListener("submit",(e)=>{
+  e.preventDefault();
   fetchData();
 })
 

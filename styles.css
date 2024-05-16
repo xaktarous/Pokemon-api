@@ -4,9 +4,12 @@ body{
   display:flex;
    flex-direction:column;
   align-items:center;
-  width:100vw;
+  justify-content: center;
+  width:100%;
 }
-
+*,::after,::before{
+  overflow: hidden;
+}
 
 .title{
   color:#F5F6F7;
@@ -16,9 +19,10 @@ body{
   display:flex;
   flex-direction:column;
   background-color:#F5F6F7;
-  width:35vw;
+  width:max(35vw,300px);
   border-radius:10px;
   box-shadow: 10px 7px #AEACB2;
+  margin-right: 20px;
 }
 header{
   display:flex;
@@ -47,23 +51,22 @@ input:focus{
 }
 main{
   display:flex;
-  width:35vw;
+  width:max(35vw,300px);
   flex-direction:column;
   align-items:center;
 }
 .affichage{
-  width: 30vw;
+  width:max(30vw,270px);
   background-color:#F0F1F7;
   height:250px;
   margin-top: 10px;
-  padding-bottom:20px;
+  padding-bottom:25px;
   padding-left:2px;
-  
 }
 
 table{
   margin-top:10px;
-  width:30vw;
+  width:max(30vw,270px);
   margin-bottom:20px;
 }
 
