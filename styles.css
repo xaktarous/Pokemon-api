@@ -1,155 +1,206 @@
 body{
-    background-color:#1B1B32;
-    font-family:sans-serif;
-    display:flex;
-     flex-direction:column;
-    align-items:center;
-    width:100vw;
-  }
-  
-  .title{
-    color:#F5F6F7;
-  }
-  
-  .all{
-    display:flex;
-    flex-direction:column;
-    background-color:#F5F6F7;
-    width:35vw;
-    border-radius:10px;
-    box-shadow: 10px 7px #AEACB2;
-  }
-  header{
-    display:flex;
-     flex-direction:column;
-    align-items:center;
-  }
-  .form{
-    display:flex;
-    gap:10px;
-  }
-  input{
-    height:40px;
-    outline:none;
-    padding-left:10px;
-  }
-  input:focus{
-    border:2px solid cyan;
-  }
-  .btn{
-    border-radius:50px;
-    width:70px;
-    border:none;
-    color:#E2F6F7;
-    background-color:#7F21AB;
-  
-  }
-  main{
-    display:flex;
-    width:35vw;
-    flex-direction:column;
-    align-items:center;
-  }
-  .affichage{
-    width: 30vw;
-    background-color:#F0F1F7;
-    height:250px;
-    margin-top: 10px;
-  }
-  
-  table{
-    margin-top:10px;
-    width:30vw;
-    margin-bottom:20px;
-  }
-  
-  .main{
-    display:flex;
-    align-items:center;
+  background-color:#1B1B32;
+  font-family:sans-serif;
+  display:flex;
+   flex-direction:column;
+  align-items:center;
+  width:100vw;
+}
+
+
+.title{
+  color:#F5F6F7;
+}
+
+.all{
+  display:flex;
   flex-direction:column;
-  
-  }
-  tr{
-    background-color:#7F21AB;
-    height:30px;
-    margin:2px;
-    text-align:center;
-    color:#F5F6F7;
-  }
+  background-color:#F5F6F7;
+  width:35vw;
+  border-radius:10px;
+  box-shadow: 10px 7px #AEACB2;
+}
+header{
+  display:flex;
+   flex-direction:column;
+  align-items:center;
+}
+.form{
+  display:flex;
+  gap:10px;
+}
+input{
+  height:40px;
+  outline:none;
+  padding-left:10px;
+}
+input:focus{
+  border:2px solid cyan;
+}
+.btn{
+  border-radius:50px;
+  width:70px;
+  border:none;
+  color:#E2F6F7;
+  background-color:#7F21AB;
 
-  #types{
-    background-color:electric;
-  }
-
+}
+main{
+  display:flex;
+  width:35vw;
+  flex-direction:column;
+  align-items:center;
+}
+.affichage{
+  width: 30vw;
+  background-color:#F0F1F7;
+  height:250px;
+  margin-top: 10px;
+  padding-bottom:20px;
+  padding-left:2px;
   
+}
+
+table{
+  margin-top:10px;
+  width:30vw;
+  margin-bottom:20px;
+}
+
+.main{
+  display:flex;
+  align-items:center;
+flex-direction:column;
+
+}
+tr{
+  background-color:#7F21AB;
+  height:30px;
+  margin:2px;
+  text-align:center;
+  color:#F5F6F7;
+}
+
+#types{
+  background-color:electric;
+}
+
+
 .normal {
-  background-color: #b7b7aa;
+background-color: #b7b7aa;
 }
 
 .fire {
-  background-color: #ff6f52;
+background-color: #ff6f52;
 }
 
 .water {
-  background-color: #42a1ff;
+background-color: #42a1ff;
 }
 
 .electric {
-  background-color: #fecc33;
+background-color: #fecc33;
 }
 
 .grass {
-  background-color: #78cc55;
+background-color: #78cc55;
 }
 
 .ice {
-  background-color: #66ccfe;
+background-color: #66ccfe;
 }
 
 .fighting {
-  background-color: #d3887e;
+background-color: #d3887e;
 }
 
 .poison {
-  background-color: #c68bb7;
+background-color: #c68bb7;
 }
 
 .ground {
-  background-color: #dfba52;
+background-color: #dfba52;
 }
 
 .flying {
-  background-color: #8899ff;
+background-color: #8899ff;
 }
 
 .psychic {
-  background-color: #ff66a3;
+background-color: #ff66a3;
 }
 
 .bug {
-  background-color: #aabb23;
+background-color: #aabb23;
 }
 
 .rock {
-  background-color: #baaa66;
+background-color: #baaa66;
 }
 
 .ghost {
-  background-color: #9995d0;
+background-color: #9995d0;
 }
 
 .dragon {
-  background-color: #9e93f1;
+background-color: #9e93f1;
 }
 
 .dark {
-  background-color: #b59682;
+background-color: #b59682;
 }
 
 .steel {
-  background-color: #abaabb;
+background-color: #abaabb;
 }
 
 .fairy {
-  background-color: #ed99ed;
+background-color: #ed99ed;
+}
+
+.name-id{
+display:flex;
+gap:3px;
+align-items:center;
+}
+
+#sprite{
+width:170px;
+
+}
+.image{
+display:flex;
+justify-content:center;
+
+}
+.wei-hei{
+display:flex;
+gap:5px;
+
+}
+
+.text{
+display: flex;
+flex-direction:column;
+align-content: center;
+margin-top:5px;
+}
+#pokemon-name,#pokemon-id,#weight,#height{
+margin:0;
+}
+
+#type{
+width:60px;
+padding:7px;
+text-align:center;
+border-radius:5px;
+margin-left:5px;
+font-size:12px;
+
+}
+
+#types{
+display:flex;
+
+
 }

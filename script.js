@@ -5,10 +5,11 @@ const heightt=document.querySelector("#height");
 const typess=document.querySelector("#types");
 const input=document.querySelector("#search-input");
 const btn=document.querySelector("#search-button");
-const img=document.querySelector("#img");
+const img=document.querySelector("#sprite");
+const typee=document.querySelector("#type");
 let arrUrl=[];
 const fetchData=async()=>{
-fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${input.value}`).then(res =>{
+fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${input.value.toLowerCase()}`).then(res =>{
   if(res.ok){
     return res.json();
   }else{
@@ -18,17 +19,24 @@ fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${input.value}`).the
   }
  
   }).then(({id,height,name,sprites,stats,types,weight})=>{
-    typess.innerHTML=""
+  //  if(document.querySelectorAll("#type")!==null){
+  //    let typee=Array.from(document.querySelectorAll("#type"))
+  //    typee.map((type)=>{
+  //      type.remove();
+  //    })
+  //  } 
+   typess.innerHTML="";
     pokName.innerHTML=name.toUpperCase();
     pokId.innerHTML="#"+id;
     weightt.innerHTML= `weight: ${weight}`;
     heightt.innerHTML= `height: ${height}`;
-    img.src=sprites.back_default;
+    img.src=sprites.front_default;
     for(let i=0;i<types.length;i++){
-     typess.innerHTML+= `<p class="${types[i].type.name}">${types[i].type.name}<p>`;
+     typess.innerHTML+= `<p id="type" class="${types[i].type.name}">${types[i].type.name.toUpperCase()}<p>`;
     }
+ 
    stats.map((stat)=>{
-     console.log(stat)
+     
      document.getElementById(stat.stat.name).innerHTML=stat.base_stat;
      
    }) 
@@ -45,3 +53,4 @@ fetch(`https://pokeapi-proxy.freecodecamp.rocks/api/pokemon/${input.value}`).the
 btn.addEventListener("click",()=>{
   fetchData();
 })
+
